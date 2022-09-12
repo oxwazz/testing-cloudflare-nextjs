@@ -2,6 +2,6 @@
 
 export async function onRequestPost(request) {
   // ...
-  return new Response(`Hello world`);
+  return new Response(request.body);
 
 }
