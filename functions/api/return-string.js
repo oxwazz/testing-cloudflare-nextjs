@@ -6,6 +6,9 @@
 
 // Reacts to POST /hello-world
 export async function onRequestPost({request}) {
-  // ...
-  return new Response(`<h1>{JSON.stringify(request.body)}<h1/>`)
+  const formData = await request.formData();
+  const body = {};
+  for (const entry of formData.entries()) {
+    body[entry[0]] = entry[1];
+  }  return new Response(JSON.stringify(body))
 }
