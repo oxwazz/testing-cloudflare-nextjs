@@ -7,6 +7,5 @@
 // Reacts to POST /hello-world
 export async function onRequestPost({request}) {
   // ...
-  let res = new Response.json({Halo:"df", ...(request.body || {}) })
-  return res
+  return Response.json({Halo:"df" })
 }
