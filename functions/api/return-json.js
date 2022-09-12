@@ -6,6 +6,5 @@
 
 // Reacts to POST /hello-world
 export async function onRequestPost(tes) {
-  // ...
   return Response.json(tes)
 }
