@@ -8,14 +8,13 @@ import {TES} from "../../halooo/sdfsdfsdf";
 // Reacts to POST /hello-worldh
 export async function onRequestPost({request}) {
   const datas = await request.json()
-  await fetch(`https://jsonplaceholder.typicode.com/users/${datas.id ? datas.id : ""}`, {
+  const rawResponse = await fetch(`https://jsonplaceholder.typicode.com/users/${datas.id ? datas.id : ""}`, {
     method: 'GET',
     // headers: {
     //   'Accept': 'application/json',
     //   'Content-Type': 'application/json'
     // },
   });
-  const content = await rawResponse.json();
   const {data} = await rawResponse.json();
 
   return Response.json({...datas,TES,data})
