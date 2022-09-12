@@ -7,5 +7,9 @@
 // Reacts to POST /hello-world
 export async function onRequestPost({request}) {
   // ...
-  return new Response(request.body);
+  let res = new Response('<h1>HALIIIII<h1/>')
+  res.set('Content-Type', 'text/html')
+
+
+  return res
 }
