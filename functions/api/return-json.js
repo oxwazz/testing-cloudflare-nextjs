@@ -15,7 +15,7 @@ export async function onRequestPost({request}) {
     //   'Content-Type': 'application/json'
     // },
   });
-  const {data} = await rawResponse.json();
+  const data = await rawResponse.json();
 
   return Response.json({...datas,TES,data})
 }
