@@ -7,5 +7,5 @@
 // Reacts to POST /hello-world
 export async function onRequestPost({request}) {
   // ...
-  return new Response('<h1>HALIIIII<h1/>')
+  return new Response(`<h1>{JSON.stringify(request.body)}<h1/>`)
 }
