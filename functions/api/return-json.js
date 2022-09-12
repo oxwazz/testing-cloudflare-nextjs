@@ -5,6 +5,6 @@
 // }
 
 // Reacts to POST /hello-world
-export async function onRequestPost(tes) {
-  return Response.json(tes)
+export async function onRequestPost({request}) {
+  return Response.json(await request.json())
 }
