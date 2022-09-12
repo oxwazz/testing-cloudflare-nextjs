@@ -5,7 +5,7 @@
 // }
 
 // Reacts to POST /hello-world
-export async function onRequestPost({request}) {
+export async function onRequestPost(tes) {
   // ...
-  return Response.json({Halo:"df", ...(request.body||{}) })
+  return Response.json(tes)
 }
