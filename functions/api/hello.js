@@ -8,7 +8,7 @@
 export async function onRequestPost({request}) {
   // ...
   let res = new Response('<h1>HALIIIII<h1/>')
-  res.set('Content-Type', 'text/html')
+  res.headers.set('Content-Type', 'text/html')
 
 
   return res
