@@ -2,6 +2,6 @@
 
 export async function onRequestPost(request) {
   // ...
-  return new Response(request.body);
+  return new Response(await request.json());
 
 }
